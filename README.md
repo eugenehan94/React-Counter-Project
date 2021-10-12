@@ -1,6 +1,6 @@
 # React Counter Project
 
-Github pages link: https://eugenehan94.github.io/React-Counter-Project/
+## Github pages link: https://eugenehan94.github.io/React-Counter-Project/
 
 
 --------------------------------------------------------------------------------------------------
