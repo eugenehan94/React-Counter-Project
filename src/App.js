@@ -56,9 +56,9 @@ const App = () => {
 
   return (
     <div className="container">
-      <h1>Complex Counter</h1>
-
-      <h1>{count}</h1>
+      <h1 data-testid="header-1">Complex Counter</h1>
+      {/* title is used for the testing */}
+      <h1 title="countTitle">{count}</h1>
 
       <div className="buttons">
         <button onClick={increaseByOne}>Increase 1</button>
