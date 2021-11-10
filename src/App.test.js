@@ -106,12 +106,19 @@ describe("Integrations tests", () => {
     fireEvent.click(screen.getByRole("button", { name: "Increase 100" }));
     expect(screen.getByTitle("countTitle").textContent).toBe("100");
   });
+  it("increase by 100, then reset to zero", () => {
+    render(<App />);
+    fireEvent.click(screen.getByRole("button", { name: "Increase 100" }));
+    expect(screen.getByTitle("countTitle").textContent).toBe("100");
+    fireEvent.click(screen.getByRole("button", { name: "Reset" }));
+    expect(screen.getByTitle("countTitle").textContent).toBe("0");
+  });
   it("decrease by 100", () => {
     render(<App />);
     fireEvent.click(screen.getByRole("button", { name: "Decrease 100" }));
     expect(screen.getByTitle("countTitle").textContent).toBe("-100");
   });
-  it("decrease by 10, then reset to zero", () => {
+  it("decrease by 100, then reset to zero", () => {
     render(<App />);
     fireEvent.click(screen.getByRole("button", { name: "Decrease 100" }));
     fireEvent.click(screen.getByRole("button", { name: "Reset" }));
